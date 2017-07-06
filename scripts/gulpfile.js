@@ -9,6 +9,7 @@ const clean = require('gulp-clean')
 const sequence = require('run-sequence')
 const browserSync = require('browser-sync')
 const htmlmin = require('gulp-htmlmin')
+const template = require('gulp-template')
 const postcss = require('gulp-postcss')
 const babel = require('gulp-babel')
 const uglify = require('gulp-uglifyjs')
@@ -37,6 +38,9 @@ gulp.task('css', () => (
 
 gulp.task('html', () => (
     gulp.src('../src/index.html')
+        .pipe(template({
+            publicPath: process.env.PUBLIC_PATH || '/'
+        }))
         .pipe(either(isProduction, htmlmin({
             collapseBooleanAttributes: true,
             collapseWhitespace: true,
