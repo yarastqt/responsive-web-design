@@ -4,6 +4,8 @@
 # node.js
 node_modules/
 npm-debug.log
+scripts/.gulp
+.gulp
 
 # editors
 .vscode
