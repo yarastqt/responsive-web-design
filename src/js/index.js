@@ -71,6 +71,14 @@ class GalleryModal {
     }
 }
 
+if (/iP(hone|ad)/.test(window.navigator.userAgent)) {
+    /**
+     * touchstart событие необходимо для того, чтобы на IOS устройствах
+     * в css срабатывало active состояние
+     */
+    document.body.addEventListener('touchstart', () => {})
+}
+
 /* eslint-disable no-undef */
 objectFitImages()
 
