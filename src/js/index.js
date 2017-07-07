@@ -71,6 +71,9 @@ class GalleryModal {
     }
 }
 
+/* eslint-disable no-undef */
+objectFitImages()
+
 /* eslint-disable no-unused-vars, no-undef */
 const lazyLoader = new LazyLoad({
     callback_load(element) {}
